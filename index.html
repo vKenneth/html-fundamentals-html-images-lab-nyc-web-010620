@@ -1,15 +1,2 @@
 <img src="../images/my_company_logo.png" alt="my company name" title="We're here to help you!">
 
-def hint(number)
-   Proc.new{YAML.load_file('./.hints')[number]}
- end
-
- def html_file_contents
-   File.read('./index.html')
- end
-
- def parsed_html
-   Nokogiri::HTML(html_file_contents) do |config|
-     config.strict.dtdload.dtdvalid.noblanks
-   end
- end
